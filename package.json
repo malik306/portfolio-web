@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "start": "parcel ./src/pages/index.html --out-dir public -p 3030 watch --no-cache --no-source-maps",
+    "build": "parcel build ./src/pages/index.html --out-dir public --no-cache --no-source-maps"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "sass": "^1.38.0"
+  }
+}

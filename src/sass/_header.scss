@@ -1,0 +1,55 @@
+.nav {
+  width: set-col-width(1);
+  height: auto;
+  background-color: set-color(gray-4);
+  padding: 1em;
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__burger {
+      display: none;
+      background: transparent;
+      cursor: pointer;
+      @include screen-max-width(700) {
+        display: block;
+        width: 2.5em;
+        div {
+          height: 0.4em;
+          width: set-col-width(1);
+          border-radius: 0.1em;
+          background-color: set-color(gray-9);
+          margin: 0.4em 0;
+        }
+        &:hover div {
+          background-color: set-color(gray-6);
+        }
+      }
+    }
+    a img {
+      width: 6em;
+    }
+    &__list {
+      &__items {
+        display: flex;
+        &__item {
+          margin: 0.3em;
+          &__link {
+            padding: 0.5em;
+            color: set-color(gray-9);
+            border-radius: 0.4em;
+            @include transition(all, 1s, ease, null);
+          }
+          &:hover &__link,
+          &--active {
+            background-color: set-color(gray-2);
+            color: set-color(gray-7);
+          }
+        }
+      }
+      @include screen-max-width(700) {
+        display: none;
+      }
+    }
+  }
+}

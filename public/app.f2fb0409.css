@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  height: auto;
+  background-color: #ced4da;
+  padding: 1em;
+}
+.nav__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__bar__burger {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+@media only screen and (max-width: 700px) {
+  .nav__bar__burger {
+    display: block;
+    width: 2.5em;
+  }
+  .nav__bar__burger div {
+    height: 0.4em;
+    width: 100%;
+    border-radius: 0.1em;
+    background-color: #212529;
+    margin: 0.4em 0;
+  }
+  .nav__bar__burger:hover div {
+    background-color: #6c757d;
+  }
+}
+.nav__bar a img {
+  width: 6em;
+}
+.nav__bar__list__items {
+  display: flex;
+}
+.nav__bar__list__items__item {
+  margin: 0.3em;
+}
+.nav__bar__list__items__item__link {
+  padding: 0.5em;
+  color: #212529;
+  border-radius: 0.4em;
+  transition: all 1s ease;
+}
+.nav__bar__list__items__item:hover .nav__bar__list__items__item__link, .nav__bar__list__items__item--active {
+  background-color: #e9ecef;
+  color: #495057;
+}
+@media only screen and (max-width: 700px) {
+  .nav__bar__list {
+    display: none;
+  }
+}
+
+.wrapper {
+  padding: 1em;
+}
+.wrapper__content {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 830px) {
+  .wrapper__content {
+    flex-direction: column;
+  }
+}
+.wrapper__content__success {
+  width: 50%;
+}
+.wrapper__content__success p {
+  font-size: 2.2em;
+  font-weight: 200;
+  line-height: 1.2;
+}
+@media only screen and (max-width: 830px) {
+  .wrapper__content__success {
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+  }
+}
+.wrapper__content__list {
+  width: 50%;
+}
+.wrapper__content__list__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.wrapper__content__list__items__item {
+  margin: 0.8em 0;
+}
+.wrapper__content__list__items__item__link {
+  color: black;
+  padding: 0.5em;
+  border-radius: 0.4em;
+  transition: all 1s ease;
+}
+.wrapper__content__list__items__item:hover .wrapper__content__list__items__item__link, .wrapper__content__list__items__item--active {
+  background-color: #e9ecef;
+}
+@media only screen and (max-width: 830px) {
+  .wrapper__content__list {
+    width: 100%;
+    padding: 1em 0;
+  }
+  .wrapper__content__list__items {
+    align-items: center;
+  }
+}
+.wrapper__icon {
+  display: grid;
+  grid-gap: 1em;
+  grid-template: auto/1fr 1fr 1fr;
+}
+@media only screen and (max-width: 645px) {
+  .wrapper__icon {
+    grid-template: auto/1fr 1fr;
+  }
+}
+@media only screen and (max-width: 435px) {
+  .wrapper__icon {
+    grid-template: auto/1fr;
+  }
+}
+.wrapper__icon--envelope, .wrapper__icon--map, .wrapper__icon--phone {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ced4da;
+}
+.wrapper__icon--envelope svg, .wrapper__icon--map svg, .wrapper__icon--phone svg {
+  width: 2.2em;
+  transition: all 0.5s ease;
+  aspect-ratio: 1/1;
+  fill: #ced4da;
+  margin-bottom: 0.8em;
+}
+.wrapper__icon--envelope:hover div, .wrapper__icon--envelope:hover svg, .wrapper__icon--map:hover div, .wrapper__icon--map:hover svg, .wrapper__icon--phone:hover div, .wrapper__icon--phone:hover svg {
+  fill: black;
+  color: black;
+}
+@media only screen and (max-width: 645px) {
+  .wrapper__icon--phone {
+    grid-area: 2/1/-1/-1;
+  }
+}
+.wrapper__social-icon-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.wrapper__social-icon-copy__icon {
+  display: flex;
+  align-items: center;
+}
+.wrapper__social-icon-copy__icon li {
+  margin: 0.5em;
+  cursor: pointer;
+}
+.wrapper__social-icon-copy__icon li svg {
+  transition: all 0.5s ease;
+  width: 2.2em;
+  aspect-ratio: 1/1;
+  fill: #ced4da;
+}
+.wrapper__social-icon-copy__icon li:hover svg {
+  fill: black;
+}
+.wrapper__social-icon-copy__copy p a {
+  transition: all 1s ease;
+  color: black;
+}
+.wrapper__social-icon-copy__copy p a:hover {
+  color: #6c757d;
+  text-decoration: underline double #6c757d;
+}

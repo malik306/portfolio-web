@@ -1,0 +1,121 @@
+.wrapper {
+  padding: 1em;
+  &__content {
+    display: flex;
+    align-items: center;
+    @include screen-max-width(830) {
+      flex-direction: column;
+    }
+    &__success {
+      width: set-col-width(2);
+      p {
+        font-size: 2.2em;
+        font-weight: 200;
+        line-height: 1.2;
+      }
+      @include screen-max-width(830) {
+        width: set-col-width(1);
+        text-align: center;
+        padding: 1em 0;
+      }
+    }
+    &__list {
+      width: set-col-width(2);
+      &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &__item {
+          margin: 0.8em 0;
+          &__link {
+            color: set-color(black);
+            padding: 0.5em;
+            border-radius: 0.4em;
+            @include transition(all, 1s, ease, null);
+          }
+
+          &:hover &__link,
+          &--active {
+            background-color: set-color(gray-2);
+          }
+        }
+      }
+      @include screen-max-width(830) {
+        width: set-col-width(1);
+        padding: 1em 0;
+        &__items {
+          align-items: center;
+        }
+      }
+    }
+  }
+  &__icon {
+    display: grid;
+    grid-gap: 1em;
+    grid-template: auto/1fr 1fr 1fr;
+    @include screen-max-width(645) {
+      grid-template: auto/1fr 1fr;
+    }
+    @include screen-max-width(435) {
+      grid-template: auto/1fr;
+    }
+    &--envelope,
+    &--map,
+    &--phone {
+      display: flex;
+      padding: 1em;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: set-color(gray-4);
+      svg {
+        width: 2.2em;
+        @include transition(all, 0.5s, ease, null);
+        aspect-ratio: 1/1;
+        fill: set-color(gray-4);
+        margin-bottom: 0.8em;
+      }
+      &:hover div,
+      &:hover svg {
+        fill: set-color(black);
+        color: set-color(black);
+      }
+    }
+    @include screen-max-width(645) {
+      &--phone {
+        grid-area: 2/1/-1/-1;
+      }
+    }
+  }
+  &__social-icon-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: set-col-width(1);
+    &__icon {
+      display: flex;
+      align-items: center;
+      li {
+        margin: 0.5em;
+        cursor: pointer;
+        svg {
+          @include transition(all, 0.5s, ease, null);
+          width: 2.2em;
+          aspect-ratio: 1/1;
+          fill: set-color(gray-4);
+        }
+        &:hover svg {
+          fill: set-color(black);
+        }
+      }
+    }
+    &__copy p a {
+      @include transition(all, 1s, ease, null);
+      color: set-color(black);
+      &:hover {
+        color: set-color(gray-6);
+        text-decoration: underline double set-color(gray-6);
+      }
+    }
+  }
+}
