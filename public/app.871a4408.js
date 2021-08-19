@@ -189,21 +189,35 @@ var _svgCode = require("./svg-code");
 function Footer() {
   return "\n    <section class=\"wrapper__content\">\n      <div class=\"wrapper__content__success\">\n        <p>Let's talk about<br/>design is my passion<br/>and the key to success</p>\n      </div>\n      <div class=\"wrapper__content__list\">\n        <ul class=\"wrapper__content__list__items\">\n          <li class=\"wrapper__content__list__items__item\"><a class=\"wrapper__content__list__items__item__link wrapper__content__list__items__item--active\" href=\"/\">Home</a></li>\n          <li class=\"wrapper__content__list__items__item\"><a class=\"wrapper__content__list__items__item__link\" href=\"/portfolio-about\">About&nbsp;Me</a></li>\n          <li class=\"wrapper__content__list__items__item\"><a class=\"wrapper__content__list__items__item__link\" href=\"/portfolio-resume\">My&nbsp;Resume</a></li>\n          <li class=\"wrapper__content__list__items__item\"><a class=\"wrapper__content__list__items__item__link\" href=\"/portfolio-project\">My&nbsp;Projects</a></li>\n          <li class=\"wrapper__content__list__items__item\"><a class=\"wrapper__content__list__items__item__link\" href=\"/portfolio-github-api\">Github&nbsp;Api</a></li>\n        </ul>\n      </div>\n    </section>\n    <section class=\"wrapper__icon\">\n      <div class=\"wrapper__icon--envelope\">\n      ".concat(_svgCode.Envelope, "\n        <div>example@gmail.com</div>\n      </div>\n      <div class=\"wrapper__icon--map\">\n      ").concat(_svgCode.MapMarker, "\n        <div>Punjab, Pakistan</div>\n      </div>\n      <div class=\"wrapper__icon--phone\">\n      ").concat(_svgCode.Phone, "\n        <div>+92-3XX-XXXXXXX</div>\n      </div>\n    </section>\n    <section class=\"wrapper__social-icon-copy\">\n      <ul class=\"wrapper__social-icon-copy__icon\">\n        <li>").concat(_svgCode.Instagram, "</li>\n        <li>").concat(_svgCode.YouTube, "</li>\n        <li>").concat(_svgCode.Twitter, "</li>\n        <li>").concat(_svgCode.Github, "</li>\n        <li>").concat(_svgCode.Facebook, "</li>\n      </ul>\n      <div class=\"wrapper__social-icon-copy__copy\">\n        <p>&copy;&nbsp;Copyright 2021 Deign by <a href=\"/\">Malik&nbsp;Portfolio</a></p>\n      </div>\n    </section>\n    ");
 }
-},{"./svg-code":"../components/svg-code.js"}],"../app.js":[function(require,module,exports) {
+},{"./svg-code":"../components/svg-code.js"}],"../components/main.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Main = Main;
+
+function Main() {
+  return "\n    <div class=\"main__align\">\n        <div class=\"main__align__name\">\n            <p>Hi, I'm Muhammad Mubashir</p>\n        </div>\n        <div class=\"main__align__typing\">\n            <p>Front-End Developer</p>\n            <p>NodeJS Developer</p>\n            <p>Python Developer</p>\n        </div>\n        <div class=\"main__align__detail\">\n            <p>Based in Pakistani Front-End Developer, Creating Innovative, Responsive Web Pages and Others</p>\n            <p>Let's Get Started</p>\n        </div>\n    </div>\n    ";
+}
+},{}],"../app.js":[function(require,module,exports) {
 "use strict";
 
 var _header = require("./components/header");
 
 var _footer = require("./components/footer");
 
+var _main = require("./components/main");
+
 function App() {
   document.getElementById("nav").innerHTML = (0, _header.Header)();
   document.getElementById("wrapper").innerHTML = (0, _footer.Footer)();
+  document.getElementById("main").innerHTML = (0, _main.Main)();
 } //Initialize the App
 
 
 App();
-},{"./components/header":"../components/header.js","./components/footer":"../components/footer.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/header":"../components/header.js","./components/footer":"../components/footer.js","./components/main":"../components/main.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -231,7 +245,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60176" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51946" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

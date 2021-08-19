@@ -1,0 +1,35 @@
+.main {
+  width: set-col-width(2);
+  margin: 0 auto;
+  padding: 3em 0;
+  @include screen-max-width(830) {
+    width: set-col-width(1.2);
+  }
+  &__align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__name {
+      p {
+        font-weight: 600;
+        font-size: 1.5em;
+      }
+    }
+    &__typing {
+      @include transition(all, 0.5s, ease, null);
+      p {
+        font-size: 1.4em;
+        font-weight: 300;
+        color: set-color(black);
+        cursor: pointer;
+      }
+      &:hover p {
+        font-weight: 500;
+      }
+    }
+    &__detail p {
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+  }
+}

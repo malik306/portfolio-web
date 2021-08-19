@@ -193,3 +193,39 @@
   color: #6c757d;
   text-decoration: underline double #6c757d;
 }
+
+.main {
+  width: 50%;
+  margin: 0 auto;
+  padding: 3em 0;
+}
+@media only screen and (max-width: 830px) {
+  .main {
+    width: 83.3333333333%;
+  }
+}
+.main__align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main__align__name p {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.main__align__typing {
+  transition: all 0.5s ease;
+}
+.main__align__typing p {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: black;
+  cursor: pointer;
+}
+.main__align__typing:hover p {
+  font-weight: 500;
+}
+.main__align__detail p {
+  font-size: 1.3em;
+  font-weight: 400;
+}
