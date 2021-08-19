@@ -6,7 +6,7 @@
   "homepage": "http://malik306.github.io/portfolio-web",
   "scripts": {
     "start": "parcel ./src/pages/index.html --out-dir public -p 3030 watch --no-cache --no-source-maps",
-    "build": "parcel build ./src/pages/index.html --out-dir public --public-url ./ --no-cache --no-source-maps",
+    "build": "parcel build ./src/pages/index.html --out-dir build --public-url ./ --no-cache --no-source-maps",
     "pre": "yarn build",
     "deploy": "gh-pages -d build"
   },
